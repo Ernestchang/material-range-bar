@@ -31,7 +31,7 @@ import android.view.View;
  * Represents a thumb in the RangeBar slider. This is the handle for the slider
  * that is pressed and slid.
  */
-class PinView extends View {
+class ErPinView extends View {
 
     // Private Constants ///////////////////////////////////////////////////////
 
@@ -59,7 +59,6 @@ class PinView extends View {
     private float mX;
 
     // mPaint to draw the thumbs if attributes are selected
-
     private Paint mTextPaint;
 
     private Drawable mPin;
@@ -97,7 +96,7 @@ class PinView extends View {
 
     // Constructors ////////////////////////////////////////////////////////////
 
-    public PinView(Context context) {
+    public ErPinView(Context context) {
         super(context);
     }
 
@@ -111,21 +110,22 @@ class PinView extends View {
      * The view is created empty with a default constructor. Use init to set all the initial
      * variables for the pin
      *
-     * @param ctx          Context
-     * @param y            The y coordinate to raw the pin (i.e. the bar location)
-     * @param pinRadiusDP  the initial size of the pin
-     * @param pinColor     the color of the pin
-     * @param textColor    the color of the value text in the pin
-     * @param circleRadius the radius of the selector circle
-     * @param minFont  the minimum font size for the pin text
-     * @param maxFont  the maximum font size for the pin text
-     * @param pinsAreTemporary  whether to show the pin initially or just the circle
+     * @param ctx              Context
+     * @param y                The y coordinate to raw the pin (i.e. the bar location)
+     * @param pinRadiusDP      the initial size of the pin
+     * @param pinColor         the color of the pin
+     * @param textColor        the color of the value text in the pin
+     * @param circleRadius     the radius of the selector circle
+     * @param minFont          the minimum font size for the pin text
+     * @param maxFont          the maximum font size for the pin text
+     * @param pinsAreTemporary whether to show the pin initially or just the circle
      */
     public void init(Context ctx, float y, float pinRadiusDP, int pinColor, int textColor,
-            float circleRadius, int circleColor, float minFont, float maxFont, boolean pinsAreTemporary) {
+                     float circleRadius, int circleColor, float minFont, float maxFont, boolean pinsAreTemporary) {
 
         mRes = ctx.getResources();
         mPin = ContextCompat.getDrawable(ctx, R.drawable.rotate);
+
 
         mDensity = getResources().getDisplayMetrics().density;
         mMinPinFont = minFont / mDensity;
@@ -261,8 +261,9 @@ class PinView extends View {
     //Draw the circle regardless of pressed state. If pin size is >0 then also draw the pin and text
     @Override
     public void draw(Canvas canvas) {
-//        canvas.drawCircle(mX, mY, mCircleRadiusPx, mCirclePaint);
         Bitmap bitmap = BitmapFactory.decodeResource(mRes, R.drawable.btn_jiacha_slide);
+
+//        canvas.drawCircle(mX, mY, mCircleRadiusPx, mCirclePaint);
 
 //        canvas.drawBitmap(bitmap, null, new RectF(mX - mCircleRadiusPx, mY - mCircleRadiusPx, mX + mCircleRadiusPx, mY + mCircleRadiusPx), mCirclePaint);
         canvas.drawBitmap(bitmap, mX - mCircleRadiusPx, mY - mCircleRadiusPx, mCirclePaint);

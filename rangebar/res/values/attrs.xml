@@ -1,5 +1,49 @@
 <resources>
 
+    <attr name="er_tickStart" format="float" />
+    <attr name="er_tickEnd" format="float" />
+    <attr name="er_tickInterval" format="float" />
+    <attr name="er_tickHeight" format="dimension" />
+    <attr name="er_tickColor" format="color" />
+    <attr name="er_barWeight" format="dimension" />
+    <attr name="er_rangeBarColor" format="reference|color" />
+    <attr name="er_textColor" format="reference|color" />
+    <attr name="er_pinColor" format="reference|color" />
+    <attr name="er_selectorSize" format="dimension" />
+    <attr name="er_pinPadding" format="dimension" />
+    <attr name="er_pinMinFont" format="dimension" />
+    <attr name="er_pinMaxFont" format="dimension" />
+    <attr name="er_rangeBarPaddingBottom" format="dimension" />
+    <attr name="er_selectorColor" format="reference|color" />
+    <attr name="er_rangeBar" format="boolean" />
+    <attr name="er_temporaryPins" format="boolean" />
+    <attr name="er_connectingLineWeight" format="dimension" />
+    <attr name="er_connectingLineColor" format="reference|color" />
+    <attr name="er_pinRadius" format="dimension" />
+
+    <declare-styleable name="ErRangeBar">
+        <attr name="er_tickStart" />
+        <attr name="er_tickEnd"  />
+        <attr name="er_tickInterval"  />
+        <attr name="er_tickHeight" />
+        <attr name="er_tickColor" />
+        <attr name="er_barWeight" />
+        <attr name="er_rangeBarColor"  />
+        <attr name="er_textColor"  />
+        <attr name="er_pinColor"  />
+        <attr name="er_selectorSize" />
+        <attr name="er_pinPadding"  />
+        <attr name="er_pinMinFont"  />
+        <attr name="er_pinMaxFont"  />
+        <attr name="er_rangeBarPaddingBottom"  />
+        <attr name="er_selectorColor"  />
+        <attr name="er_rangeBar"  />
+        <attr name="er_temporaryPins" />
+        <attr name="er_connectingLineWeight"  />
+        <attr name="er_connectingLineColor"  />
+        <attr name="er_pinRadius"  />
+    </declare-styleable>
+
     <declare-styleable name="RangeBar">
         <attr name="tickStart" format="float" />
         <attr name="tickEnd" format="float" />

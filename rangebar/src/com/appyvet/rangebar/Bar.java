@@ -121,6 +121,16 @@ public class Bar {
         return mRightX;
     }
 
+
+    /**
+     *  Get every tick real distance
+     * @return
+     */
+    public float getmTickDistance() {
+        return mTickDistance;
+    }
+
+
     /**
      * Gets the x-coordinate of the nearest tick to the given x-coordinate.
      *
