@@ -15,8 +15,6 @@ package com.appyvet.rangebar;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
@@ -261,11 +259,11 @@ class PinView extends View {
     //Draw the circle regardless of pressed state. If pin size is >0 then also draw the pin and text
     @Override
     public void draw(Canvas canvas) {
-//        canvas.drawCircle(mX, mY, mCircleRadiusPx, mCirclePaint);
-        Bitmap bitmap = BitmapFactory.decodeResource(mRes, R.drawable.btn_jiacha_slide);
+        canvas.drawCircle(mX, mY, mCircleRadiusPx, mCirclePaint);
+//        Bitmap bitmap = BitmapFactory.decodeResource(mRes, R.drawable.btn_jiacha_slide);
 
 //        canvas.drawBitmap(bitmap, null, new RectF(mX - mCircleRadiusPx, mY - mCircleRadiusPx, mX + mCircleRadiusPx, mY + mCircleRadiusPx), mCirclePaint);
-        canvas.drawBitmap(bitmap, mX - mCircleRadiusPx, mY - mCircleRadiusPx, mCirclePaint);
+//        canvas.drawBitmap(bitmap, mX - mCircleRadiusPx, mY - mCircleRadiusPx, mCirclePaint);
         //Draw pin if pressed
         if (mPinRadiusPx > 0 && (mHasBeenPressed || !mPinsAreTemporary)) {
             mBounds.set((int) mX - mPinRadiusPx,

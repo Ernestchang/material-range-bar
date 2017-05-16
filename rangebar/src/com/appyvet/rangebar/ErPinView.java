@@ -261,7 +261,7 @@ class ErPinView extends View {
     //Draw the circle regardless of pressed state. If pin size is >0 then also draw the pin and text
     @Override
     public void draw(Canvas canvas) {
-        Bitmap bitmap = BitmapFactory.decodeResource(mRes, R.drawable.btn_jiacha_slide);
+        Bitmap bitmap = BitmapFactory.decodeResource(mRes, R.drawable.icon_circle_filter_drag);
 
 //        canvas.drawCircle(mX, mY, mCircleRadiusPx, mCirclePaint);
 
